@@ -1,0 +1,145 @@
+﻿@import url("layout.css");
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	background-attachment: scroll;
+	background-color: #b9cfa1;
+	background-image: url("../images/background.gif");
+	background-position: top left;
+	background-repeat: repeat-x;
+}
+#container {
+	width: 100%;
+	margin-top: 57px;
+	border-bottom: 2px solid #363636;
+	background-color: #fff;
+}
+#masthead {
+	width: 670px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#navigation {
+	width: 670px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	overflow: hidden;
+}
+#page_content {
+	position: relative;
+	width: 670px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+#content {
+	position: relative;
+	float: left;
+	width: 320px;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#sidebar {
+	float: right;
+	width: 330px;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#footer {
+	clear: both;
+	width: 670px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 10px;
+	text-align: left;
+	padding-top: 10px;
+}
+/* Masthead Styles */
+#masthead h1 {
+	font-weight: normal;
+	color: #261;
+	text-transform: uppercase;
+	display: inline;
+}
+#masthead h3 {
+	font-weight: normal;
+	color: #708090;
+	display: inline;
+	margin-top: 3.5%;
+	margin-left: 10%;
+}
+/* Navigation Styles */
+#navigation ul {
+	list-style-type: none;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+#navigation li {
+	float: left;
+}
+#navigation a {
+	text-decoration: none;
+	color: #fff8dc;
+	display: block;
+	margin: 0 1px;
+	padding: 5px;
+	border: 1px solid #708090;
+	background-color: #8fbc8f;
+}
+#navigation a:hover {
+	text-decoration: none;
+	color: #261;
+	background-color: #ccc;
+}
+/* Content Styles */
+#content h1,h2,h3,h4,h5,h6 {
+	color: #455;
+}
+#content img {
+	padding: 5px;
+	border: 1px solid #708090;
+}
+/* Sidebar Styles */
+#sidebar p {
+	color: #555;
+}
+#sidebar img {
+	float: right;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+/* Footer Styles */
+#footer p {
+	font-size: 0.85em;
+	color: #c4c4c4;
+}
+#footer a {
+	color: #708090;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #2f4f4f;
+	text-decoration: none;
+}
+/* Link Styles */
+a {
+	color: #261;
+	text-decoration: underline;
+}
+a:hover {
+	color: #708090;
+	text-decoration: underline;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}
