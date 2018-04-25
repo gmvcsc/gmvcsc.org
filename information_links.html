@@ -1,76 +1,55 @@
 ﻿<!DOCTYPE html>
 <html>
 
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>Information Links</title>
-    <style type="text/css">
-      .auto-style2 {
-        color: #226611;
-        text-decoration: underline;
-      }
-    </style>
-    <link href="styles/style1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
-    <style type="text/css">
-      .auto-style1 {
-        margin-left: 0px;
-      }
-    </style>
-  </head>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <title>GMVCSC | Information Links</title>
+  <style type="text/css">
+    .auto-style2 {
+      color: #226611;
+      text-decoration: underline;
+    }
+  </style>
+  <link href="styles/style1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+  <style type="text/css">
+    .auto-style1 {
+      margin-left: 0px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script> 
+    $(document).ready(function () {
+      $("#navigation").load("templates/nav.html");
+      $("#footer").load("templates/footer.html");
+      $("#sidebar").load("templates/sidebar.html");
+    });
+  </script>
+</head>
 
-  <body>
+<body>
 
-    <div id="container">
-      <div id="masthead" class="auto-style1" style="width: 841px">
-        <h1>GMVCSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
-        <h3>Greater Miami Valley Computer Science Circle</h3>
-      </div>
-      <div id="navigation">
+  <div id="container">
+
+    <div id="navigation"></div>
+      <div id="content">
+        
+        <h2>Links</h2>
+        <p>
+          <strong>GMVCSC-fall 2017 and after will be linked on schoology.com class site</strong>
+        </p>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="photo_gallery.html">Photo Gallery</a></li>
-          <li><a href="information_links.html">Links</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="events.html">Events-Registration</a></li>
+          <li>
+            <a href="https://osdn.net/projects/sfnet_samurai/downloads/SamuraiWTF%25203.0%2520Branch/SamuraiWTF3.3.2.zip/">
+              GMVCSC-sp2017-samurai-hacking101-vm-image</a>
+          </li>
+          <li><a href="events.html">Events-Registartion</a></li>
         </ul>
       </div>
-      <div id="page_content" style="left: 0px; top: 0px; width: 840px">
-        <div id="content" style="left: 4px; top: -1px; width: 495px">
-          <a href="events.html">Events-Registartion</a>
-          <h2>Links</h2>
-          <p><strong>GMVCSC-fall 2017 and after will be linked on
-              schoology.com class site</strong></p>
-          <p>&nbsp;</p>
-          <ul>
-            <li>
-              <a href="https://osdn.net/projects/sfnet_samurai/downloads/SamuraiWTF%25203.0%2520Branch/SamuraiWTF3.3.2.zip/">
-                GMVCSC-sp2017-samurai-hacking101-vm-image</a></li>
-          </ul>
-        </div>
-        <div id="sidebar">
-          <h3>Additional Resources</h3>
-          <p>
-            <a href="https://www.google.com/search?q=computer+security+help+websites&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a&amp;channel=sb#rls=org.mozilla:en-US:official&amp;channel=sb&amp;q=free+help+websites">Google for free
-              python or security websites&nbsp; links</a></p>
-        </div>
-      </div>
 
-      <div id="footer">
-        <p><a href="index.html">Home</a> | <a href="about.html">About</a>
-          | <a href="news.html">News</a> |
-          <a href="calendar.html">
-            Calendar</a> | <a href="photo_gallery.html">Photo Gallery</a> |
-          <a href="information_links.html">Links</a> |
-          <a href="faq.html">FAQ</a> |
-          <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          created by:&nbsp; Chris Nelson &amp; Patrick Yang </p>
-      </div>
-    </div>
+    <div id="footer"></div>
 
-  </body>
+  </div>
+
+</body>
 
 </html>

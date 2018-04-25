@@ -1,66 +1,64 @@
 ﻿<!DOCTYPE html>
 <html>
 
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>Home</title>
-    <link href="styles/style1.css" media="screen" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-      .auto-style1 {
-        margin-left: 0px;
-      }
-    </style>
-  </head>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <title>GMVCSC | Home</title>
+  <link href="styles/style1.css" media="screen" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .auto-style1 {
+      margin-left: 0px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script> 
+    $(document).ready(function () {
+      $("#navigation").load("templates/nav.html");
+      $("#footer").load("templates/footer.html");
+      $("#sidebar").load("templates/sidebar.html");
+    });
+  </script>
+</head>
 
-  <body>
-    <div id="container">
+<body>
+  <div id="navigation"></div>
+  <div id="container">
 
-      <div id="masthead" class="auto-style1" style="width: 841px">
-        <h1>GMVCSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
-        <h3>Greater Miami Valley Computer Science Circle</h3>
-      </div>
+   
 
-      <div id="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="photo_gallery.html">Photo Gallery</a></li>
-          <li><a href="information_links.html">Links</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="events.html">Events-Registration</a></li>
-        </ul>
-      </div>
+    <div id="content">
+      <h2>Welcome to the GMVCSC</h2>
+      <p>The Greater Miami Valley Computer Science Circle (GMVCSC), in its 3rd year of operation, is an organization dedicated
+        to helping the students of the Miami Valley and beyond. Our Computer circle focuses on computational thinking and
+        problem solving. We use Python/Java/HTML to teach concepts like Algorithm design, Web design, Mobile apps, Robotics,
+        and Information Security. We currently only have 1 class level, as we get more instructors we will try to break out
+        into beginning and intermediate/advanced classes. The GMVCSC is open to 7-12 graders who have had at least Algebra
+        1. Faculty come from local school districts, area colleges and universities, private industry, local government.
+        We have students from all over the area and beyond; we are truly a “Greater Miami Valley” organization! We meet from
+        10:00am-Noon the 1st and 3rd Saturday of the month during the school year (September-early May) in the Mathematical
+        and Microbiological Sciences (MM) Building on the campus of Wright State University.
+      </p>
 
-      <div id="page_content" style="left: 0px; top: 0px; width: 840px">
-        <div id="content" style="left: 4px; top: -1px; width: 495px">
-          <img alt="" height="222" src="images/gmvcsc.jpg" width="481" />
-          <h2>Welcome to the GMVMC</h2>
-          <p>The Greater Miami Valley Computer Science Circle is here to help you become
-            better at Computer releated problem solving and thinking.&nbsp; We have
-            Computer Circle&nbsp; meetings twice a month to help High School and
-            Advanced middle school students.</p>
-        </div>
+      <a href="events.html">Events-Registartion</a>
+      <h2>About</h2>
+      <p>The Greater Miami Valley Math Circle was created to help 6-12 grade and College students who are interested in math
+        learn more.</p>
+      <p>The GMVMC is sponsored by the Math department at Wright State University and meetings are held in Mathematical &amp;
+        Microbiological Sciences Building.</p>
+      <p>You can also like&amp;follow us on
+        <a href="https://www.facebook.com/pages/Greater-Miami-Valley-Computer-Science-Circle/356306351219180?pnref=lhc">facebook</a>
+      </p>
+      <p>Or even&nbsp; Twitter&nbsp;&nbsp; @GMVCSC</p>
 
-        <div id="sidebar">
-          <h3>Have a Great Day!</h3>
-          <img alt="" class="float_right" height="229" src="smileyface.jpg" width="225" />
-          <p></p>
-        </div>
-      </div>
-
-      <div id="footer">
-        <p><a href="index.html">Home</a> | <a href="about.html">About</a>
-          | <a href="news.html">News</a> | <a href="calendar.html">
-            Calendar</a> | <a href="photo_gallery.html">Photo Gallery</a> |
-          <a href="information_links.html">Links</a> |
-          <a href="faq.html">FAQ</a> | <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          created by:&nbsp; Chris Nelson &amp; Patrick Yang </p>
-      </div>
+      <h3>Additional Resources</h3>
+      <a href="http://science-math.wright.edu/math-statistics">
+        <p>http://science-math.wright.edu/math-statistics</p>
+      </a>
+      
     </div>
+    <div id="footer"></div>
+  </div>
 
-  </body>
+</body>
 
 </html>
