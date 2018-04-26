@@ -17,6 +17,7 @@
     function loadContentPage(contentName) {
 
       contents.load(`content-pages/${contentName}.html`, function (responseText, textStatus, req) {
+            if (location.hash.substring(1) == contentName) return;
             if (textStatus === "error") {
               alert(`Content page for "${e.text()}" does not exist.`);
               return;
