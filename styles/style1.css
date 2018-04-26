@@ -108,6 +108,12 @@ body,
 #navigation li:hover {
   text-decoration: none;
   color: #261;
+  -o-transition:.1s;
+  -ms-transition:.1s;
+  -moz-transition:.1s;
+  -webkit-transition:.1s;
+  /* ...and now for the proper property */
+  transition:.1s;
   background-color: #ccc;
 }
 
