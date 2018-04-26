@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -36,6 +36,11 @@
         var e = $(element);
         e.click(function () {
           loadContentPage(e.attr('data-contents'));
+          navbarList.each(function (index, element) {
+            var e = $(element);
+            e.css('background-color', '#8fbc8f');
+          });
+          e.css('background-color', '#ccc');
         });
       });
     }
