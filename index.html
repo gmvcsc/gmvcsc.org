@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -15,11 +15,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script> 
     function loadContentPage(contentName) {
+
       contents.load(`content-pages/${contentName}.html`, function (responseText, textStatus, req) {
             if (textStatus === "error") {
               alert(`Content page for "${e.text()}" does not exist.`);
               return;
             }
+            contents.hide();
+            contents.fadeIn();
             location.hash = contentName;
           });
     }
