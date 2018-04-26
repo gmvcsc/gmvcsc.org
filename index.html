@@ -1,88 +1,72 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>GMVCSC</title>
-    <link href="styles/style1.css" media="screen" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-      .auto-style1 {
-        margin-left: 0px;
-      }
-    </style>
-  </head>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <title>GMVCSC | Home</title>
+  <link href="styles/style1.css" media="screen" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .auto-style1 {
+      margin-left: 0px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script> 
+    function loadContentPage(contentName) {
+      contents.load(`content-pages/${contentName}.html`, function (responseText, textStatus, req) {
+            if (textStatus === "error") {
+              alert(`Content page for "${e.text()}" does not exist.`);
+              return;
+            }
+            location.hash = contentName;
+          });
+    }
 
-  <body>
-    <div id="container">
-      <div id="masthead" class="auto-style1" style="width: 841px">
-      </div>
+    function setupLinks() {
+      var navbar = $("#navbar");
+      var navbarList = navbar.find("li");
 
-      <div id="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="photo_gallery.html">Photo Gallery</a></li>
-          <li><a href="information_links.html">Links</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="events.html">Events-Registration</a></li>
-        </ul>
-      </div>
+      navbarList.each(function (index, element) {
+        var e = $(element);
+        e.click(function () {
+          loadContentPage(e.attr('data-contents'));
+        });
+      });
+    }
 
-      <div id="page_content" style="left: 0px; top: 0px; width: 840px">
-        <div id="content" style="left: 4px; top: -1px; width: 495px">
-          <h2>Welcome to the GMVCSC</h2>
-          <p>
-            The Greater Miami Valley Computer Science Circle (GMVCSC), in its 3rd year of operation, is an organization dedicated to helping the students of the Miami Valley and beyond. 
-            Our Computer circle focuses on computational thinking and problem solving. We use Python/Java/HTML to teach concepts like Algorithm design, Web design, Mobile apps, Robotics, and Information Security. 
-            We currently only have 1 class level, as we get more instructors we will try to break out into beginning and intermediate/advanced classes. The GMVCSC is open to 7-12 graders who have had at least Algebra 1. 
-            Faculty come from local school districts, area colleges and universities, private industry, local government. We have students from all over the area and beyond; we are truly a “Greater Miami Valley” organization!
-          </p>
-          
-          <p>
-            We meet from 10:00am-Noon the 1st and 3rd Saturday of the month during the school year (September-early May) in the Mathematical and Microbiological Sciences (MM) Building on the campus of Wright State University.
-          </p>
+    function handleHash() {
+      var hash = location.hash.substring(1);
+      contents.load(`content-pages/${hash}.html`, function (responseText, textStatus, req) {
+        if (textStatus === "error") {
+          loadContentPage('home');
+          return;
+        }
+      });
+    }
 
-          <p>
-             If you would like to inquire about joining one of our groups, please contact either Mr. Ken Nelson (at <a href="mailto:ken.nelson@wright.edu" target="_top">ken.nelson@wright.edu</a>) or Dr. Munsup Seoh (at <a href="mailto:munsup.seoh@wright.edu" target="_top">munsup.seoh@wright.edu</a>). 
-             Spaces are limited! If there is not space for your child at the time you email us, then you will be placed on our waiting list. 
-             Available spaces will be offered to those on our waiting list first, with priority given to those on the list longest.
-          </p>
+    var contents;
+    $(document).ready(function () {
+      $("#navigation").load("templates/nav.html", function () {
+        setupLinks();
+      });
 
-          <p>
-             If you or someone you know, would be interested in volunteering with our organization, then please let us know as well! 
-             We will be happy to talk with you and see where your skills and talents can be best used!
-          </p>
+      $("#footer").load("templates/footer.html", );
+      $("#sidebar").load("templates/sidebar.html");
 
-          <p>
-             Lastly, please let us know if you have any questions and see the flyer about our group copied below. 
-             Please share it with anyone who would be interested! We thank you in advance for reading this letter and wish you well!
-          </p>
+      contents = $("#contents");
+      handleHash();
+    });
+  </script>
+</head>
 
-          <p> 
-            Coordinators:
-            Email Mr. Ken Nelson at <a href="mailto:ken.nelson@wright.edu" target="_top">ken.nelson@wright.edu</a>
-            Email Dr. Munsup Seoh at <a href="mailto:munsup.seoh@wright.edu" target="_top">munsup.seoh@wright.edu</a> 
-         </p>
-        </div>
-
-        <div id="sidebar">
-          <p></p>
-        </div>
-      </div>
-
-      <div id="footer">
-        <p><a href="index.html">Home</a> | <a href="about.html">About</a>
-          | <a href="news.html">News</a> | <a href="calendar.html">
-            Calendar</a> | <a href="photo_gallery.html">Photo Gallery</a> |
-          <a href="information_links.html">Links</a> |
-          <a href="faq.html">FAQ</a> | <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          created by:&nbsp; Chris Nelson &amp; Patrick Yang </p>
-      </div>
-    </div>
-
-  </body>
+<body>
+  <div id="navigation"></div>
+  <div id="container">
+    <div id="contents"></div>
+    <div id="footer"></div>
+  </div>
+</body>
 
 </html>
