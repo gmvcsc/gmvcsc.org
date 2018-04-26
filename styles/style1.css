@@ -72,7 +72,15 @@ body,
 	-webkit-box-shadow: 0 8px 6px -6px #999;
       -moz-box-shadow: 0 8px 6px -6px #999;
              box-shadow: 0 8px 6px -6px #999;
-	padding-bottom: 15px;
+  padding-bottom: 15px;
+}
+#navbar {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
 #navigation .buttons {
   display: flex;
@@ -89,8 +97,6 @@ body,
 }
 #navigation li {
   float: left;
-}
-#navigation a {
   text-decoration: none;
   color: #fff8dc;
   display: block;
@@ -99,7 +105,7 @@ body,
   border: 1px solid #708090;
   background-color: #8fbc8f;
 }
-#navigation a:hover {
+#navigation li:hover {
   text-decoration: none;
   color: #261;
   background-color: #ccc;
