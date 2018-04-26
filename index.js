@@ -27,6 +27,7 @@ function setupLinks(cb) {
         var e = $(element);
         setGreen(e);
       });
+      document.title = "GMVCSC | " + e.text();
       setGrey(e);
     });
   }, cb);
