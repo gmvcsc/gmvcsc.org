@@ -68,18 +68,18 @@ body,
   margin: 0 auto;
   width: 100%;
   display: inline-block;
-	-webkit-box-shadow: 0 8px 6px -6px #999;
-      -moz-box-shadow: 0 8px 6px -6px #999;
-             box-shadow: 0 8px 6px -6px #999;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
   padding-bottom: 15px;
 }
 #navbar {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 #navigation .buttons {
   display: flex;
@@ -107,12 +107,12 @@ body,
 #navigation li:hover {
   text-decoration: none;
   color: #261;
-  -o-transition:.1s;
-  -ms-transition:.1s;
-  -moz-transition:.1s;
-  -webkit-transition:.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
   /* ...and now for the proper property */
-  transition:.1s;
+  transition: 0.1s;
   background-color: #ccc;
 }
 
@@ -125,6 +125,18 @@ h5,
 h6,
 p {
   color: #455;
+}
+#content #photo-gallery {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+  flex-direction: column;
 }
 #content img {
   padding: 5px;
