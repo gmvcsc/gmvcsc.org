@@ -138,6 +138,10 @@ p {
   align-items: center;
   flex-direction: column;
 }
+#content #photo-gallery img {
+  width: 100%;
+  z-index: 0;
+}
 #content img {
   padding: 5px;
   border: 1px solid #708090;
