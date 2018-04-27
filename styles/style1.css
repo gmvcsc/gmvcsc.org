@@ -46,10 +46,13 @@ body,
 
 #content {
   position: relative;
-  width: 670px;
+  max-width: 670px;
   margin-left: auto;
   margin-right: auto;
-  padding: 128px;
+  margin-top: 10px;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: left;
 }
 #sidebar {
@@ -62,21 +65,25 @@ body,
   bottom: 0;
   text-align: center;
 }
-
 #navigation {
   z-index: 1;
   position: fixed;
   top: 0px;
+  height: 100px;
   background-color: #fff;
   margin: 0 auto;
   width: 100%;
-  display: inline-block;
   -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 8px 6px -6px #999;
   padding-bottom: 15px;
 }
-#navbar {
+#navigation .buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -84,24 +91,22 @@ body,
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
 }
-#navigation .buttons {
-  display: flex;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-}
 /* Navigation Styles */
 #navigation ul {
+  min-width: 670px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   list-style-type: none;
   width: auto;
   margin: 0;
   padding: 0;
 }
 #navigation li {
+  white-space:nowrap;
   float: left;
   text-decoration: none;
   color: #fff8dc;
-  display: block;
   margin: 0 1px;
   padding: 5px;
   border: 1px solid #708090;
