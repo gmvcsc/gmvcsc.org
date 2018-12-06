@@ -22,7 +22,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: gmvcsc
-github_username:  gmvcsc
+github_username: gmvcsc
+source: src
 
 # Build settings
 markdown: kramdown
@@ -42,7 +43,6 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-
 kramdown:
-    auto_ids: true
-    auto_links: true
+  auto_ids: true
+  auto_links: true
