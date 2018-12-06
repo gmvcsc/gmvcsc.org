@@ -27,9 +27,8 @@
     }
 </style>
 
-<p class="image-gallery">{% for file in site.static_files %}{% if file.path contains include.folder %}{% if
-    file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}{% assign
+<p class="image-gallery">{% for file in site.static_files %}{% if file.path contains include.folder and file.path contains 'image_gallery'%}{% assign
     filenameparts = file.path | split: "/" %}{% assign filename = filenameparts | last | replace: file.extname,"" %}
     <a href="{{ file.path }}" title="{{ filename }}"><img src="http://{{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}"
-            alt="{{ filename }}" title="{{ filename }}" /><span>{{ filename }}</span></a>{% endif %}{% endif %}{%
+            alt="{{ filename }}" title="{{ filename }}" /><span>{{ filename }}</span></a>{% endif %}{%
     endfor %}</p>
