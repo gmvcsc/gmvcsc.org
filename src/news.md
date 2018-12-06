@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact
+title: News
 ---
 # News
 ## Science Olympiad is coming
