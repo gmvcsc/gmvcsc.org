@@ -4,14 +4,11 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
-    <style>
-    
-    </style>
     <a style="text-align: center;width: 100vw;
               position: relative;
               margin-left: -50vw;
-              left: 50%;" 
-              class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+              left: 50%;"
+      class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     {%- if page_paths -%}
     <nav class="site-nav">
@@ -26,12 +23,14 @@
 
       <div class="trigger">
         {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if page.url == my_page.url -%}
-            <a style="font-weight:bold" class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- else -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if page.url == my_page.url -%}
+        <a style="font-weight:bold; white-space: nowrap; " class="page-link" href="{{ my_page.url | relative_url }}">{{
+          my_page.title | escape }}</a>
+        {%- else -%}
+        <a style="white-space: nowrap" class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title |
+          escape }}</a>
+        {%- endif -%}
 
         {%- endfor -%}
 
