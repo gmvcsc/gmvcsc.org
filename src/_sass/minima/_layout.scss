@@ -2,12 +2,14 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  // border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  background-color: $wsu-green;
 }
 
 .site-title {
@@ -15,95 +17,152 @@
   font-weight: 300;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
-  margin-bottom: 0;
   float: left;
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: white;
   }
+
+  max-width: 80%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: left;
 }
 
 .site-nav {
-  float: right;
-  margin: auto;
-  margin-left: auto;
-  margin-right: auto;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
     display: none;
   }
 
+  @media screen and (min-width: $on-palm) {
+
+    .trigger {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+
+      border-top-style: solid;
+      border-top-width: 0.5px;
+      border-top-color: #307050;
+
+      background: #026937;
+      background: -webkit-linear-gradient(top, #026937, #063d1d);
+      background: linear-gradient(to bottom, #026937, #063d1d);
+
+      width: 100%;
+      padding-left: 100vw;
+      margin-left: -100vw;
+      padding-right: 100vw;
+      margin-right: -100vw;
+    }
+  }
+
+  .trigger a {
+    display: block;
+    color: $wsu-gold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    flex-grow: 5;
+
+    text-align: center;
+  }
+
+  .trigger a:hover {
+    color: #307050;
+    text-decoration: none;
+    background-color: $wsu-gold;
+  }
+
+  #current-page-button {
+    background-color: #b5caba;
+    color: #307050;
+  }
+
+  #current-page-button:hover,
+  #current-page-button:hover {
+    text-decoration: none;
+    background-color: $wsu-gold;
+  }
+}
+
+.menu-icon {
+  display: none;
+}
+
+.page-link {
+  color: $text-color;
+  line-height: $base-line-height;
+
+  //Gaps between each nav item, equal on each side.
+  // &:not(:last-child) {
+  // //  margin-right: 10px;
+  // }
+
+  // &:not(:first-child) {
+  //   margin-left: calc(50vw);
+  // }
+
+}
+
+@include media-query($on-palm) {
+  position: absolute;
+  top: 9px;
+  right: $spacing-unit / 2;
+  background-color: $background-color;
+  border: 1px solid $grey-color-light;
+  border-radius: 5px;
+  text-align: right;
+
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
   .menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: center;
+
+    >svg {
+      fill: white;
+    }
+  }
+
+  input~.trigger {
+    clear: both;
     display: none;
   }
 
-  .page-link {
-    color: $text-color;
-    line-height: $base-line-height;
-
-    // Gaps between each nav item, equal on each side.
-    &:not(:last-child) {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
+  input:checked~.trigger {
+    display: block;
+    padding-bottom: 5px;
   }
 
-  @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
+  .page-link {
+    display: block;
+    padding: 5px 10px;
 
-    label[for="nav-trigger"] {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 36px;
-      z-index: 2;
-      cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 0;
     }
 
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      >svg {
-        fill: $grey-color-dark;
-      }
-    }
-
-    input~.trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked~.trigger {
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-
-      margin-left: 20px;
-    }
+    // margin-left: 20px;
   }
 }
+
 
 
 

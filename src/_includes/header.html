@@ -1,7 +1,8 @@
 <header class="site-header" role="banner">
 
-  <div class="wrapper">
+  <div class="wrapper" id="header-wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign html_paths = site.html_pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
@@ -16,22 +17,21 @@
           </svg>
         </span>
       </label>
-
+      
       <div class="trigger">
-        {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if page.url == my_page.url -%}
-        <a style="font-weight:bold; white-space: nowrap; " class="page-link" href="{{ my_page.url | relative_url }}">{{
-          my_page.title | escape }}</a>
-        {%- else -%}
-        <a style="white-space: nowrap" class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title |
-          escape }}</a>
-        {%- endif -%}
+        
+          {%- for path in html_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+              {%- if page.url == my_page.url -%}
+                <a style="font-weight:bold; white-space: nowrap;" id="current-page-button" class="page-link" href="{{ my_page.url | relative_url }}">
+                {{ my_page.title | escape }}</a>
+              {%- else -%}
+                <a style="white-space: nowrap" class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {% endif %}
+          {%- endfor -%}
 
-        {%- endfor -%}
-
-        {% assign pages_list = nil %}
-        {% assign group = nil %}
+          {% assign pages_list = nil %}
+          {% assign group = nil %}
       </div>
     </nav>
     {%- endif -%}
