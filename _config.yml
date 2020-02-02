@@ -23,6 +23,10 @@ twitter_username: gmvcsc
 github_username: gmvcsc
 source: src
 
+# Server settings for local development
+host: 0.0.0.0
+port: 3000
+
 # Build settings
 markdown: kramdown
 theme: minima
