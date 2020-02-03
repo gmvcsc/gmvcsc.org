@@ -2,4 +2,5 @@
 layout: page
 title: Images
 ---
-{% include image-gallery.html folder="/assets/images" %}
+<p>This page is in development</p>
+<!-- {% include image-gallery.html folder="/assets/images" %} -->
