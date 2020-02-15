@@ -50,3 +50,5 @@ plugins:
 kramdown:
   auto_ids: true
   auto_links: true
+
+exclude: ["Gemfile*", "Rakefile"]
